@@ -16,8 +16,11 @@ public class CanJump {
         if(nums.length == 1){
             return true;
         }
-        for(int i=0;i<=nums[0];i++){
-            if(i+nums[i]>=maxReach){
+        for(int i=0;i<nums.length;i++){
+            if(maxReach < i){
+                return false;
+            }
+            if(i+nums[i] >= maxReach){
                 maxReach = i+nums[i];
                 if(maxReach>=nums.length-1){
                     return true;

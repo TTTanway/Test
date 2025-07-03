@@ -12,7 +12,7 @@ public class DianDian_2 {
         Long result = minCost(nums);
         System.out.println(result);
     }
-    public long minCost(int[] a) {
+    public static long minCost(int[] a) {
         PriorityQueue<Long> min = new PriorityQueue<>(); //按照从小到大的顺序排列
         for(int num:a){
             min.offer((long)num);

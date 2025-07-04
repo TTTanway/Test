@@ -4,15 +4,15 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class MinWindow {
-    public void main(String[] args) {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();
         String t = scanner.nextLine();
         System.out.println(minWindow(s, t));
     }
-    Map<Character,Integer> ori = new HashMap<>();
-    Map<Character,Integer> cnt = new HashMap<>();
-    public String minWindow(String s, String t) {
+    static Map<Character,Integer> ori = new HashMap<>();
+    static Map<Character,Integer> cnt = new HashMap<>();
+    public static String minWindow(String s, String t) {
         int tLen = t.length();
         for(int i=0;i<tLen;i++){
             char c = t.charAt(i);
@@ -40,7 +40,7 @@ public class MinWindow {
         }
         return ansL == -1 ? "" : s.substring(ansL,ansR);
     }
-    public boolean check() {
+    public static boolean check() {
         Iterator iter = ori.entrySet().iterator();
         while(iter.hasNext()){
             Map.Entry entry = (Map.Entry) iter.next();

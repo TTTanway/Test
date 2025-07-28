@@ -15,5 +15,6 @@ public class MergeTwoLists {
             list2.next = mergeTwoLists(list1, list2.next);
             return list2;
         }
+        return null;
     }
 }
